@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aditya Pratap Yadav</title>
+<meta name="description" content="Graduate Business Analyst in Birmingham. Business analytics postgraduate with a computer science background. SQL, Python, Tableau and the questions that come first.">
+<meta name="theme-color" content="#07131C">
+<link rel="canonical" href="https://adityapratapyadav.netlify.app/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2307131C'/%3E%3Cg stroke='%23FF5A21' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M9 7h6'/%3E%3Cpath d='M20 12h4'/%3E%3Cpath d='M11 17h10'/%3E%3Cpath d='M16 22v4'/%3E%3C/g%3E%3C/svg%3E">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Aditya Pratap Yadav">
+<meta property="og:description" content="Graduate Business Analyst in Birmingham. Business analytics postgraduate with a computer science background.">
+<meta property="og:url" content="https://adityapratapyadav.netlify.app/">
+<meta property="og:image" content="https://adityapratapyadav.netlify.app/assets/hero-ending.jpg">
+<meta property="og:image:width" content="1216">
+<meta property="og:image:height" content="684">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo:wght@700;900&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --canvas:#07131C;
+  --canvas-deep:#030A11;
+  --panel:#0E1F2C;
+  --panel-edge:#1E3E55;
+  --border-interactive:#44789A;
+  --accent:#FF5A21;
+  --accent-hover:#FF7748;
+  --accent-muted:rgba(255,90,33,.20);
+  --accent-ink:#07131C;
+  --signal-cold:#7FB0CE;
+  --text-primary:#E6EFF5;
+  --text-secondary:#93A9B9;
+  --text-tertiary:#68849A;
+  --display:'Chivo',system-ui,sans-serif;
+  --body:'Public Sans',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --tshadow:0 1px 2px rgba(3,8,14,.95),0 3px 12px rgba(3,8,14,.8),0 10px 44px rgba(3,8,14,.82);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --ease-soft:cubic-bezier(.4,0,.2,1);
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden;overflow-x:clip}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--canvas);color:var(--text-secondary);
+  font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--display);color:var(--text-primary);line-height:1.02;margin:0;letter-spacing:-.02em}
+p{margin:0}
+a{color:inherit}
+figure{margin:0}              /* the UA sheet puts 40px side margins on every figure */
+img{max-width:100%;display:block}
+
+/* ---------- fixed environment ---------- */
+.env{position:fixed;inset:0;z-index:0;pointer-events:none}
+.env::before{content:"";position:absolute;inset:-20%;
+  background:
+    radial-gradient(ellipse 60% 45% at 22% 18%,rgba(68,120,154,.16),transparent 60%),
+    radial-gradient(ellipse 50% 40% at 82% 72%,rgba(255,90,33,.055),transparent 62%);
+  animation:envdrift 96s var(--ease-soft) infinite alternate;animation-delay:-31s}
+@keyframes envdrift{0%{transform:translate3d(0,0,0) scale(1)}100%{transform:translate3d(2.5%,-2%,0) scale(1.09)}}
+.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* ---------- the resolve line (signature) ---------- */
+.resolve-rail{position:fixed;left:26px;top:0;bottom:0;width:44px;z-index:3;pointer-events:none}
+.resolve-rail svg{width:100%;height:100%}
+.resolve-rail line{stroke:var(--accent);stroke-width:2.4;stroke-linecap:round}
+@media (max-width:1180px){.resolve-rail{display:none}}
+
+/* ---------- skip + nav ---------- */
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--accent);color:var(--accent-ink);
+  padding:12px 20px;font-family:var(--mono);font-size:13px;border-radius:0 0 8px 0}
+.skip:focus{left:0}
+nav{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;align-items:center;justify-content:space-between;
+  gap:20px;padding:16px clamp(18px,4vw,42px);
+  background:linear-gradient(to bottom,rgba(7,19,28,.88),rgba(7,19,28,.62) 62%,transparent);
+  backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px)}
+.brand{display:flex;align-items:center;gap:11px;font-family:var(--display);font-weight:700;font-size:15px;
+  color:var(--text-primary);letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
+.brand svg{flex:none}
+.navlinks{display:flex;align-items:center;gap:clamp(12px,1.8vw,26px)}
+.navlinks a{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--text-secondary);text-decoration:none;transition:color .3s var(--ease)}
+.navlinks a:hover{color:var(--text-primary)}
+.navlinks .nav-cv{color:var(--accent)}
+.navlinks .nav-cv:hover{color:var(--accent-hover)}
+@media (max-width:860px){.navlinks a:not(.nav-cv){display:none}}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:var(--mono);font-size:13.5px;letter-spacing:.05em;text-transform:uppercase;
+  padding:14px 26px;border-radius:3px;text-decoration:none;cursor:pointer;border:1px solid transparent;
+  transition:background .34s var(--ease),color .34s var(--ease),border-color .34s var(--ease),transform .34s var(--ease);
+  text-shadow:none}
+.btn-primary{background:var(--accent);color:var(--accent-ink);font-weight:500}
+.btn-primary:hover{background:var(--accent-hover);transform:translateY(-2px)}
+.btn-ghost{border-color:var(--border-interactive);color:var(--text-primary);background:transparent}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+@media (pointer:coarse){.btn{min-height:44px}}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;height:700vh;z-index:2}
+.stage{position:sticky;top:0;height:100vh;overflow:hidden;background:var(--canvas-deep)}
+.poster,.stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.poster{background-size:cover;background-position:center;transition:opacity .9s var(--ease)}
+.stage video{opacity:0;transition:opacity .85s var(--ease);will-change:transform;transform:translateZ(0)}
+.stage.video-ready video{opacity:1}
+.stage.video-ready .poster{opacity:0}
+.stage.video-failed video{display:none}
+.scrim{position:absolute;inset:0;pointer-events:none;
+  background:
+    linear-gradient(to right,rgba(3,8,14,.72) 0%,rgba(3,8,14,.58) 28%,rgba(3,8,14,.30) 50%,rgba(3,8,14,0) 68%),
+    radial-gradient(ellipse 120% 90% at 50% 45%,rgba(3,8,14,0) 34%,rgba(3,8,14,.62) 100%)}
+/* per-band scrim lives on the stage, not inside a band, so it can never leave a seam */
+.band-scrim{position:absolute;inset:0;pointer-events:none;opacity:0;
+  background:linear-gradient(to right,rgba(3,8,14,.56) 0%,rgba(3,8,14,.43) 30%,rgba(3,8,14,.20) 52%,rgba(3,8,14,0) 70%)}
+
+.ring{position:absolute;right:clamp(20px,4vw,44px);bottom:clamp(20px,4vw,44px);width:48px;height:48px;
+  color:var(--accent);opacity:.9;transform:rotate(-90deg);pointer-events:none}
+.ring circle{transition:stroke-dashoffset .18s linear}
+.ring.done{opacity:0;transition:opacity .6s var(--ease)}
+.chev{position:absolute;right:clamp(20px,4vw,44px);bottom:clamp(20px,4vw,44px);width:34px;height:48px;
+  color:var(--text-tertiary);pointer-events:none;animation:chev 2.8s var(--ease-soft) infinite;animation-delay:-.6s}
+@keyframes chev{0%,100%{transform:translateY(0);opacity:.55}50%{transform:translateY(8px);opacity:1}}
+
+.bands{position:absolute;inset:0;display:grid;grid-template-columns:minmax(0,46%) 1fr;
+  align-items:center;padding:0 clamp(22px,5.5vw,92px);pointer-events:none}
+.band{grid-area:1/1;position:relative;opacity:0;text-shadow:var(--tshadow);will-change:opacity}
+.band .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:18px}
+.band h2,.band h1{font-family:var(--display);font-weight:900;
+  font-size:clamp(30px,4.6vw,62px);line-height:1.04;color:var(--text-primary);max-width:15ch}
+.band .sub{margin-top:18px;font-size:clamp(15px,1.35vw,19px);color:var(--text-primary);opacity:.9;max-width:34ch}
+.band .cta-row{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px;pointer-events:auto}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+.w{display:inline-block;white-space:pre}
+.c{display:inline-block;white-space:pre}
+.e-scatter .c,.e-grid .c{
+  --kc:clamp(0,(var(--k,0) - var(--th,0))*2.6,1);opacity:var(--kc);
+  transform:translate(calc((1 - var(--kc))*var(--jx,0px)),calc((1 - var(--kc))*var(--jy,0px)))
+            rotate(calc((1 - var(--kc))*var(--jr,0deg)))}
+.e-punch .w{--kc:clamp(0,(var(--k,0) - var(--th,0))*3,1);
+  --ks:clamp(0,(var(--k,0) - var(--th,0) - var(--sd,.1))*var(--ss,3.2),1);
+  opacity:var(--kc);
+  transform:scale(calc(0.62 + (0.38 + var(--ov,.12))*var(--kc) - var(--ov,.12)*var(--ks)))}
+.e-punch .w.em{--ov:.24;--sd:.16;--ss:2.6;color:var(--accent)}
+.e-blur .stack{position:relative;display:block}
+.e-blur .soft{position:absolute;inset:0;filter:blur(11px);opacity:calc(1 - var(--k,0))}
+.e-blur .sharp{opacity:var(--k,0)}
+.e-rise .w{--kc:clamp(0,(var(--k,0) - var(--th,0))*2.8,1);opacity:var(--kc);
+  transform:translateY(calc((1 - var(--kc))*26px))}
+.e-rise .sub{--ks:clamp(0,(var(--k,0) - .66)*4,1);opacity:var(--ks);
+  transform:translateY(calc((1 - var(--ks))*14px))}
+.e-rise .cta-row{--kb:clamp(0,(var(--k,0) - .78)*5,1);opacity:var(--kb);
+  transform:translateY(calc((1 - var(--kb))*14px))}
+
+.static-hero{position:absolute;inset:0;display:none;align-items:flex-end;
+  padding:clamp(80px,14vh,140px) clamp(22px,7vw,80px) clamp(44px,8vh,90px)}
+.static-hero .inner{max-width:26ch;text-shadow:var(--tshadow)}
+.static-hero .kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.static-hero h1{font-weight:900;font-size:clamp(34px,9vw,58px);margin:16px 0 0}
+.static-hero .sub{margin-top:16px;font-size:16px;color:var(--text-primary);opacity:.92;max-width:32ch}
+.static-hero .cta-row{margin-top:26px;display:flex;flex-wrap:wrap;gap:11px}
+body.static-hero-on .bands,body.static-hero-on .ring,body.static-hero-on .chev,
+body.static-hero-on .band-scrim{display:none}
+body.static-hero-on .static-hero{display:flex}
+body.static-hero-on .hero{height:100vh}
+body.static-hero-on .poster{opacity:1!important}
+body.static-hero-on .stage video{display:none}
+body.static-hero-on .scrim{background:linear-gradient(to top,rgba(3,8,14,.96) 0%,rgba(3,8,14,.90) 24%,rgba(3,8,14,.62) 48%,rgba(3,8,14,.24) 72%,rgba(3,8,14,.08) 100%)}
+
+/* PORTRAIT SCRUB. A phone gets its own natively vertical cut of the film rather than a
+   still, so nothing is cover-cropped away. The caption lane moves from the left column to
+   the bottom of the screen, which is where a portrait frame has its calm space. */
+body.portrait-hero .hero{height:560vh}
+body.portrait-hero .bands{grid-template-columns:1fr;align-items:end;
+  padding:0 clamp(22px,6vw,40px) clamp(96px,17vh,170px)}
+body.portrait-hero .band h1,body.portrait-hero .band h2{max-width:none;font-size:clamp(29px,7.6vw,46px)}
+body.portrait-hero .band .sub{max-width:none;font-size:16px}
+body.portrait-hero .band .kicker{margin-bottom:14px}
+body.portrait-hero .scrim{background:
+  linear-gradient(to top,rgba(3,8,14,.95) 0%,rgba(3,8,14,.86) 20%,rgba(3,8,14,.52) 44%,rgba(3,8,14,.14) 70%,rgba(3,8,14,0) 100%)}
+body.portrait-hero .band-scrim{background:
+  linear-gradient(to top,rgba(3,8,14,.60) 0%,rgba(3,8,14,.46) 24%,rgba(3,8,14,.20) 48%,rgba(3,8,14,0) 74%)}
+@media (max-height:560px){.ring,.chev{display:none}}
+
+/* ---------- shared section furniture ---------- */
+main{position:relative;z-index:2}
+section{position:relative;padding:clamp(76px,11vh,140px) 0}
+.wrap{width:min(1180px,92vw);margin:0 auto}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);
+  display:flex;align-items:center;gap:12px}
+.kicker::before{content:"";width:26px;height:1px;background:var(--accent);flex:none}
+.h2{font-size:clamp(27px,3.7vw,48px);font-weight:900;margin-top:20px;max-width:19ch}
+.lede{margin-top:20px;font-size:clamp(16px,1.3vw,18.5px);max-width:58ch;color:var(--text-secondary)}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
+.in .rv,.rv.in{opacity:1;transform:none}
+.in .rv:nth-child(2){transition-delay:.09s}
+.in .rv:nth-child(3){transition-delay:.18s}
+.in .rv:nth-child(4){transition-delay:.27s}
+.in .rv:nth-child(5){transition-delay:.36s}
+.in.done .rv,.in.done .rv:nth-child(2),.in.done .rv:nth-child(3),
+.in.done .rv:nth-child(4),.in.done .rv:nth-child(5){transition-delay:0s!important}
+
+/* ---------- S1 ABOUT: portrait beside prose ---------- */
+.about-grid{margin-top:clamp(40px,6vh,64px);display:grid;gap:clamp(30px,4.5vw,68px);
+  grid-template-columns:minmax(0,320px) 1fr;align-items:start}
+.portrait{position:relative;border-radius:4px;overflow:hidden;border:1px solid var(--panel-edge)}
+/* height:auto is required, or the img's height attribute wins over aspect-ratio */
+.portrait img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;filter:saturate(.82) contrast(1.04)}
+.portrait::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(to top,rgba(7,19,28,.55),rgba(7,19,28,0) 55%),
+             linear-gradient(to right,rgba(68,120,154,.14),rgba(255,90,33,.07))}
+.portrait-meta{margin-top:16px;font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--text-tertiary);display:grid;gap:7px}
+.portrait-meta span{display:block}
+.about-prose p{font-size:clamp(16px,1.32vw,18.5px);max-width:62ch}
+.about-prose p + p{margin-top:19px}
+.about-prose b{color:var(--text-primary);font-weight:600}
+.about-tags{margin-top:28px;display:flex;flex-wrap:wrap;gap:9px}
+.tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--text-secondary);border:1px solid var(--panel-edge);border-radius:2px;padding:7px 12px}
+.tag.hot{color:var(--accent);border-color:var(--accent-muted)}
+@media (max-width:820px){.about-grid{grid-template-columns:1fr}
+  .portrait{max-width:280px}}
+
+/* ---------- S2 SKILLS: three list columns ---------- */
+.kit{margin-top:clamp(40px,6vh,64px);display:grid;gap:clamp(20px,2.5vw,34px);grid-template-columns:repeat(3,1fr)}
+.kitcol h3{font-family:var(--mono);font-size:11.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--accent);
+  font-weight:500;padding-bottom:13px;border-bottom:1px solid var(--panel-edge)}
+.kitcol ul{list-style:none;margin:16px 0 0;padding:0}
+.kitcol li{font-size:15px;padding:6px 0;color:var(--text-secondary)}
+@media (max-width:860px){.kit{grid-template-columns:1fr}}
+
+/* ---------- S3 PROJECT: one section, statement led ---------- */
+.project{background:var(--canvas-deep);border-top:1px solid var(--panel-edge);border-bottom:1px solid var(--panel-edge)}
+.pmeta{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px 26px;font-family:var(--mono);font-size:11.5px;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--text-tertiary)}
+.statement{margin-top:clamp(40px,5.5vh,64px);font-family:var(--display);font-weight:900;
+  font-size:clamp(27px,4.4vw,60px);line-height:1.04;letter-spacing:-.025em;max-width:20ch;color:var(--text-primary)}
+.statement .hit{color:var(--accent);display:block}
+.support{margin-top:24px;max-width:56ch;font-size:clamp(15.5px,1.28vw,18px)}
+.figrow{margin-top:clamp(34px,4.5vh,54px);display:grid;gap:1px;background:var(--panel-edge);
+  grid-template-columns:repeat(4,1fr);border:1px solid var(--panel-edge);border-radius:4px;overflow:hidden}
+.fig{background:var(--canvas-deep);padding:clamp(17px,1.9vw,26px)}
+.fig .v{font-family:var(--display);font-weight:900;font-size:clamp(22px,2.8vw,38px);color:var(--text-primary);letter-spacing:-.02em}
+.fig .l{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-tertiary);margin-top:8px}
+@media (max-width:760px){.figrow{grid-template-columns:repeat(2,1fr)}}
+.pdid{margin-top:clamp(36px,5vh,56px);display:grid;gap:clamp(16px,2vw,26px);grid-template-columns:repeat(3,1fr)}
+.pdid div{border-left:2px solid var(--accent);padding-left:18px}
+.pdid h4{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);
+  font-weight:500;margin:0 0 10px}
+.pdid p{font-size:15px}
+@media (max-width:820px){.pdid{grid-template-columns:1fr}}
+
+/* the one interactive moment, compact and inside the project section */
+.resolve-block{margin-top:clamp(44px,6vh,72px);border:1px solid var(--panel-edge);border-radius:4px;
+  padding:clamp(24px,3vw,40px);background:var(--canvas);text-align:center}
+.resolve-block .lab{font-family:var(--mono);font-size:11px;letter-spacing:.17em;text-transform:uppercase;color:var(--accent)}
+.resolve-block h3{margin-top:14px;font-size:clamp(18px,2vw,26px);font-weight:700}
+.resolve-block .say{margin-top:12px;font-size:15px;max-width:48ch;margin-left:auto;margin-right:auto}
+.resolve-stack{margin-top:clamp(24px,3.5vh,38px);position:relative;height:clamp(150px,20vh,190px);
+  display:flex;align-items:center;justify-content:center}
+.variant{position:absolute;font-family:var(--mono);font-size:clamp(10px,1vw,12.5px);color:var(--text-tertiary);
+  white-space:nowrap;left:50%;will-change:transform,opacity}
+.canonical{position:absolute;left:50%;font-family:var(--display);font-weight:700;
+  font-size:clamp(15px,2vw,26px);color:var(--accent);white-space:nowrap;opacity:0;
+  transform:translateX(-50%) scale(.96);letter-spacing:-.01em}
+.hold-row{margin-top:clamp(22px,3vh,34px);display:flex;flex-wrap:wrap;align-items:center;gap:18px;justify-content:center}
+.hold-btn{position:relative;overflow:hidden;background:transparent;border:1px solid var(--border-interactive);
+  color:var(--text-primary);font-family:var(--mono);font-size:13px;letter-spacing:.05em;text-transform:uppercase;
+  padding:14px 30px;border-radius:3px;cursor:pointer;touch-action:none;user-select:none;-webkit-user-select:none;
+  transition:border-color .4s var(--ease),color .4s var(--ease)}
+.hold-btn:hover{border-color:var(--accent)}
+.hold-btn .fill{position:absolute;inset:0;background:var(--accent-muted);transform-origin:left center;
+  transform:scaleX(var(--hp,0));z-index:0}
+.hold-btn .fill::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--accent)}
+.hold-btn .lbl{position:relative;z-index:1}
+.counter{font-family:var(--mono);font-size:13px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-secondary)}
+.counter b{color:var(--accent);font-weight:500}
+.resolve-out{margin-top:clamp(22px,3vh,32px);opacity:0;transform:translateY(12px);
+  transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.resolve-out.lit{opacity:1;transform:none}
+.resolve-out p{font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;color:var(--text-tertiary)}
+
+.shots{margin-top:clamp(36px,5vh,56px);display:flex;gap:clamp(13px,1.6vw,20px);overflow-x:auto;
+  padding-bottom:16px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.shot{flex:none;width:min(520px,80vw);scroll-snap-align:start}
+.shot .frame{border:1px solid var(--panel-edge);border-radius:4px;overflow:hidden;background:var(--panel);
+  aspect-ratio:16/9;display:flex;align-items:center;justify-content:center}
+.shot .frame img{width:100%;height:100%;object-fit:cover}
+.shot .ph{font-family:var(--mono);font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--text-tertiary);
+  text-align:center;padding:20px;line-height:2}
+.shot figcaption{margin-top:12px;font-size:14px;color:var(--text-secondary)}
+.shot figcaption b{color:var(--text-primary);font-weight:600;font-family:var(--body)}
+
+/* ---------- S4 EXPERIENCE: date spine ---------- */
+.rail{margin-top:clamp(40px,6vh,64px);border-left:1px solid var(--panel-edge);padding-left:clamp(22px,3vw,44px)}
+.job{position:relative;padding-bottom:clamp(38px,5vh,58px)}
+.job:last-child{padding-bottom:0}
+.job::before{content:"";position:absolute;left:calc(-1*clamp(22px,3vw,44px) - 5px);top:9px;width:9px;height:9px;
+  border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--canvas)}
+.job .meta{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-tertiary);
+  display:flex;flex-wrap:wrap;gap:8px 18px}
+.job h3{font-size:clamp(19px,1.9vw,25px);font-weight:700;margin:14px 0 6px}
+.job .role{font-family:var(--mono);font-size:12.5px;letter-spacing:.09em;color:var(--accent);text-transform:uppercase}
+.job ul{list-style:none;margin:16px 0 0;padding:0;max-width:66ch}
+.job li{position:relative;padding-left:20px;font-size:15.5px;margin-bottom:10px}
+.job li::before{content:"";position:absolute;left:0;top:11px;width:7px;height:1px;background:var(--accent)}
+
+/* ---------- S5 EDUCATION + CERTIFICATIONS ---------- */
+.edu-grid{margin-top:clamp(40px,6vh,64px);display:grid;gap:clamp(26px,3.5vw,56px);grid-template-columns:1fr 1fr}
+@media (max-width:860px){.edu-grid{grid-template-columns:1fr}}
+.edu-grid h3{font-family:var(--mono);font-size:11.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--accent);
+  font-weight:500;padding-bottom:13px;border-bottom:1px solid var(--panel-edge)}
+.deg{margin-top:22px}
+.deg .t{font-family:var(--display);font-weight:700;font-size:clamp(17px,1.6vw,21px);color:var(--text-primary)}
+.deg .s{font-family:var(--mono);font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--text-tertiary);margin-top:7px}
+.deg p{margin-top:11px;font-size:15px;max-width:52ch}
+.certlist{list-style:none;margin:22px 0 0;padding:0}
+.certlist li{font-size:15px;padding:9px 0;border-bottom:1px solid rgba(30,62,85,.5);display:flex;gap:14px;align-items:baseline}
+.certlist li:last-child{border-bottom:0}
+.certlist .src{font-family:var(--mono);font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--accent);flex:none;width:9ch}
+
+/* ---------- S6 CONTACT ---------- */
+.contact{background:var(--canvas-deep);border-top:1px solid var(--panel-edge)}
+.cgrid{margin-top:clamp(38px,5vh,58px);display:grid;gap:clamp(30px,4vw,64px);grid-template-columns:1.05fr .95fr;align-items:start}
+@media (max-width:880px){.cgrid{grid-template-columns:1fr}}
+.field{margin-bottom:18px}
+.field label{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--text-tertiary);margin-bottom:9px}
+.field input,.field textarea{width:100%;background:var(--panel);border:1px solid var(--border-interactive);
+  border-radius:3px;padding:13px 15px;color:var(--text-primary);font-family:var(--body);font-size:15.5px;
+  transition:border-color .35s var(--ease)}
+.field textarea{min-height:120px;resize:vertical}
+.field input:focus,.field textarea:focus{border-color:var(--accent);outline:none}
+.field input::placeholder,.field textarea::placeholder{color:var(--text-tertiary);opacity:.7}
+.formnote{margin-top:14px;font-size:13.5px;color:var(--text-tertiary);max-width:48ch}
+.sent{margin-top:16px;font-family:var(--mono);font-size:13px;letter-spacing:.06em;color:var(--accent);display:none}
+.sent.on{display:block}
+.mailblock{background:var(--panel);border:1px solid var(--panel-edge);border-radius:4px;padding:clamp(22px,2.6vw,32px)}
+.mailblock .lab{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-tertiary)}
+.mailblock .addr{font-family:var(--display);font-weight:700;font-size:clamp(17px,2.1vw,26px);color:var(--text-primary);
+  margin:12px 0 18px;word-break:break-all;letter-spacing:-.01em}
+.copybtn{background:transparent;border:1px solid var(--border-interactive);color:var(--text-primary);
+  font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;padding:11px 20px;
+  border-radius:3px;cursor:pointer;transition:border-color .35s var(--ease),color .35s var(--ease)}
+.copybtn:hover{border-color:var(--accent);color:var(--accent)}
+.secondary{margin-top:26px;padding-top:24px;border-top:1px solid var(--panel-edge);display:grid;gap:12px}
+.secondary a,.secondary span{font-family:var(--mono);font-size:13px;letter-spacing:.04em;color:var(--text-secondary);
+  text-decoration:none;transition:color .35s var(--ease)}
+.secondary a:hover{color:var(--accent)}
+.status{margin-top:22px;font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;color:var(--text-tertiary);
+  display:flex;align-items:center;gap:10px}
+.status::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none}
+
+footer{border-top:1px solid var(--panel-edge);padding:clamp(44px,6vh,70px) 0;position:relative;z-index:2}
+.frow{display:flex;flex-wrap:wrap;gap:22px 40px;justify-content:space-between;align-items:baseline}
+.fname{font-family:var(--display);font-weight:700;font-size:17px;color:var(--text-primary)}
+.fmeta{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-tertiary);margin-top:8px}
+.flinks{display:flex;flex-wrap:wrap;gap:10px 24px}
+.flinks a{font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;color:var(--text-secondary);
+  text-decoration:none;transition:color .35s var(--ease)}
+.flinks a:hover{color:var(--accent)}
+body.paused *,body.paused *::before,body.paused *::after{animation-play-state:paused!important}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important;transition-delay:0s!important}
+  .rv{opacity:1!important;transform:none!important}
+  .resolve-out{opacity:1;transform:none}
+  .band{text-shadow:var(--tshadow)}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="env" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="resolve-rail" aria-hidden="true"><svg viewBox="0 0 44 1000" preserveAspectRatio="none"><g id="rail"></g></svg></div>
+
+<nav>
+  <a class="brand" href="#main">
+    <svg width="20" height="20" viewBox="0 0 32 32" aria-hidden="true"><g stroke="#FF5A21" stroke-width="2.4" stroke-linecap="round"><path d="M9 7h6"/><path d="M20 12h4"/><path d="M11 17h10"/><path d="M16 22v4"/></g></svg>
+    Aditya Pratap Yadav
+  </a>
+  <div class="navlinks">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#project">Project</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+    <a class="nav-cv" href="assets/Aditya-Pratap-Yadav-CV.pdf" download>CV</a>
+  </div>
+</nav>
+
+<main id="main" tabindex="-1">
+
+<!-- ================= HERO ================= -->
+<section class="hero" aria-label="Introduction">
+  <div class="stage">
+    <div class="poster" aria-hidden="true"></div>
+    <video id="hero" preload="none" muted playsinline aria-hidden="true" tabindex="-1"></video>
+    <div class="scrim" aria-hidden="true"></div>
+    <div class="band-scrim" aria-hidden="true"></div>
+
+    <svg class="ring" viewBox="0 0 48 48" aria-hidden="true">
+      <circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" stroke-width="3"
+              stroke-dasharray="126" style="stroke-dashoffset:var(--ld,126)"/>
+    </svg>
+
+    <div class="bands">
+      <div class="band e-scatter" data-band="0">
+        <p class="kicker">Birmingham, England</p>
+        <h2 data-split="char" data-text="Most data arrives as a mess."></h2>
+      </div>
+      <div class="band e-grid" data-band="1" data-spread="0.5">
+        <h2 data-split="char" data-text="Somebody has to make it answer a question."></h2>
+      </div>
+      <div class="band e-punch" data-band="2">
+        <h2 data-split="word" data-em="Tableau." data-text="SQL. Python. Tableau. R."></h2>
+      </div>
+      <div class="band e-blur" data-band="3">
+        <h2 data-split="blur" data-text="Business analytics on top of computer science."></h2>
+      </div>
+      <div class="band e-rise" data-band="4">
+        <h1 data-split="word" data-text="Aditya Pratap Yadav"></h1>
+        <p class="sub">Graduate Business Analyst. Birmingham.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contact">Get in touch</a>
+          <a class="btn btn-ghost" href="assets/Aditya-Pratap-Yadav-CV.pdf" download>Download CV</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="static-hero">
+      <div class="inner">
+        <p class="kicker">Birmingham, England</p>
+        <h1>Aditya Pratap Yadav</h1>
+        <p class="sub">Graduate Business Analyst. I turn messy data into an answer somebody can act on.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contact">Get in touch</a>
+          <a class="btn btn-ghost" href="assets/Aditya-Pratap-Yadav-CV.pdf" download>Download CV</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="wrap">
+    <div class="rvgroup">
+      <p class="kicker rv">About</p>
+      <h2 class="h2 rv">Computer science first. Then the part that decides what to build.</h2>
+    </div>
+    <div class="about-grid rvgroup">
+      <div class="rv">
+        <figure class="portrait"><img src="assets/aditya-portrait.jpg" alt="Aditya Pratap Yadav" width="1100" height="1100"></figure>
+        <div class="portrait-meta">
+          <span>Birmingham, England</span>
+          <span>MSc Business Analytics, UoB</span>
+          <span>BTech Computer Science, VIT</span>
+        </div>
+      </div>
+      <div class="about-prose rv">
+        <p>I am a business analytics postgraduate with a computer science degree underneath it. Four years at VIT taught me how software actually gets built. The MSc at Birmingham taught me the part that comes before any of that: sitting with the people who will use the thing, agreeing what counts as success when nobody has written it down, and getting the numbers to say something a manager can act on.</p>
+        <p>In between I spent eleven months in a data led marketing role in India, owning the monthly reporting that decided where the budget went next. I wrote the rules for which leads were worth passing on, and I was the one presenting the numbers when the spend was being argued over.</p>
+        <p>Most recently I ran a live client engagement for the University of Birmingham Library with four others, where an open brief had to become something the team could still run after we left. <b>That is the work I want more of: an unclear question at the start, and something usable at the end.</b></p>
+        <p>I am in Birmingham, eligible to work in the UK with no sponsorship needed, and looking for a graduate Business Analyst role.</p>
+        <div class="about-tags">
+          <span class="tag hot">Open to graduate BA roles</span>
+          <span class="tag">Requirements elicitation</span>
+          <span class="tag">SQL and Python</span>
+          <span class="tag">Tableau and Power BI</span>
+          <span class="tag">Stakeholder workshops</span>
+          <span class="tag">Forecasting</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= KEY SKILLS ================= -->
+<section id="skills">
+  <div class="wrap">
+    <div class="rvgroup">
+      <p class="kicker rv">Key skills</p>
+      <h2 class="h2 rv">What I can open on Monday.</h2>
+      <p class="lede rv">The tools are the easy half. The other half is knowing which question the tool is being pointed at.</p>
+    </div>
+    <div class="kit rvgroup">
+      <div class="kitcol rv">
+        <h3>Business analysis</h3>
+        <ul>
+          <li>Requirements gathering and elicitation</li>
+          <li>Stakeholder management</li>
+          <li>Process mapping</li>
+          <li>Gap analysis</li>
+          <li>User stories and acceptance criteria</li>
+          <li>User acceptance testing</li>
+          <li>Requirements documentation</li>
+        </ul>
+      </div>
+      <div class="kitcol rv">
+        <h3>Data and analytics</h3>
+        <ul>
+          <li>SQL</li>
+          <li>Python</li>
+          <li>R</li>
+          <li>Statistical modelling</li>
+          <li>Predictive analytics and forecasting</li>
+          <li>Data cleaning and validation</li>
+          <li>Data modelling and KPI definition</li>
+        </ul>
+      </div>
+      <div class="kitcol rv">
+        <h3>Reporting and delivery</h3>
+        <ul>
+          <li>Tableau</li>
+          <li>Microsoft Power BI</li>
+          <li>Microsoft Excel</li>
+          <li>Google Analytics</li>
+          <li>Dashboard design</li>
+          <li>Executive reporting</li>
+          <li>Agile delivery and client workshops</li>
+          <li>Handover documentation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= THE PROJECT (one section) ================= -->
+<section id="project" class="project">
+  <div class="wrap">
+    <div class="rvgroup">
+      <p class="kicker rv">Analytics and consultancy project</p>
+      <h2 class="h2 rv">From Operational Record to Evidence Base</h2>
+      <p class="lede rv">A five person consultancy engagement for the Research Skills Team inside Libraries and Learning Resources at the University of Birmingham. A live client, their own data, their own deadline. The brief did not say what to build.</p>
+      <p class="pmeta rv"><span>June to September 2026</span><span>Team of five</span><span>Python, Tableau, forecasting</span></p>
+    </div>
+
+    <div class="rvgroup">
+      <p class="statement rv">The headline said attendance had fallen 48 percent.<span class="hit">It had not. The records had.</span></p>
+      <p class="support rv">Forty seven of the 399 sessions had no attendance recorded at all, and only a quarter had a school recorded against them. Once the missing records were accounted for, average attendance per session was almost unchanged. The collapse was in the recording, not in the room.</p>
+      <div class="figrow rv">
+        <div class="fig"><p class="v">4,935</p><p class="l">Total attendees</p></div>
+        <div class="fig"><p class="v">15.4</p><p class="l">Average per session</p></div>
+        <div class="fig"><p class="v">52%</p><p class="l">Delivered online</p></div>
+        <div class="fig"><p class="v">4.38</p><p class="l">Overall satisfaction</p></div>
+      </div>
+    </div>
+
+    <div class="pdid rvgroup">
+      <div class="rv">
+        <h4>The real requirement</h4>
+        <p>No KPIs existed, so we agreed them from scratch with the client. The open brief became three ranked workstreams: workshop performance, a reporting asset the team could maintain themselves, and where engagement was missing.</p>
+      </div>
+      <div class="rv">
+        <h4>The scope line</h4>
+        <p>Partway through, the remit moved from describing what had happened to predicting what happens next. We put the change in front of the client, agreed what it meant for the deadline, and re-set the scope in writing.</p>
+      </div>
+      <div class="rv">
+        <h4>The handover</h4>
+        <p>1,878 records from 2023 to 2026 merged and cleaned in Python, six Tableau dashboards, exponential smoothing forecasts, and a documented pipeline so the team can rerun it without me.</p>
+      </div>
+    </div>
+
+    <div class="resolve-block rv">
+      <p class="lab">Hold to resolve</p>
+      <h3>Ninety four ways to write one workshop title.</h3>
+      <p class="say">This is the part nobody puts on a CV. Hold the button and watch the data agree with itself.</p>
+      <div class="resolve-stack" id="stack" aria-hidden="true"></div>
+      <div class="hold-row">
+        <button class="hold-btn" id="holdbtn" aria-describedby="counter">
+          <span class="fill" aria-hidden="true"></span>
+          <span class="lbl">Hold to resolve</span>
+        </button>
+        <p class="counter" id="counter"><b id="cval">94</b> variants</p>
+      </div>
+      <div class="resolve-out" id="resolveout">
+        <p>No dashboard is honest until this part is done.</p>
+      </div>
+    </div>
+
+    <div class="shots rv">
+      <figure class="shot"><div class="frame"><img src="assets/dashboard-1.jpg" alt="Overview dashboard: total attendees, sessions delivered, average attendance per session, satisfaction and the share of sessions with a school recorded" loading="lazy" decoding="async"></div><figcaption><b>Overview.</b> The headline numbers, and the footnote that turned out to matter: only 352 of the 399 sessions had attendance recorded at all.</figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="assets/dashboard-2.jpg" alt="Workshop performance dashboard: highest average attendance per session, top ten workshops, fill rate against planned capacity, and satisfaction plotted against attendance" loading="lazy" decoding="async"></div><figcaption><b>Workshop performance.</b> Fill rate against planned capacity, and satisfaction plotted against attendance so the client could see where to act rather than just what happened.</figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="assets/dashboard-3.jpg" alt="Forecast dashboard: attendance forecast, one to one appointment forecast, demand forecast by workshop category and forecast by delivery mode" loading="lazy" decoding="async"></div><figcaption><b>Forecasts.</b> Exponential smoothing on attendance, one to one appointments, demand by category and delivery mode, so a term can be planned instead of described.</figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="assets/dashboard-4.jpg" alt="Engagement dashboard: college engagement by service type, which schools use the one to one service, and what can and cannot be attributed to a college" loading="lazy" decoding="async"></div><figcaption><b>Engagement gaps.</b> Which colleges use which service, and an honest split of what can and cannot be attributed to a college at all.</figcaption></figure>
+      <figure class="shot"><div class="frame"><img src="assets/dashboard-5.jpg" alt="Service mix dashboard: service mix by college, most requested one to one topics, when each service peaks, and attendance by term and delivery format" loading="lazy" decoding="async"></div><figcaption><b>Seasonality and service mix.</b> When each service peaks across the academic year, and how attendance splits by term and delivery format.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROFESSIONAL EXPERIENCE ================= -->
+<section id="experience">
+  <div class="wrap">
+    <div class="rvgroup">
+      <p class="kicker rv">Professional experience</p>
+      <h2 class="h2 rv">I have already worked inside a delivery team.</h2>
+    </div>
+    <div class="rail rvgroup">
+      <article class="job rv">
+        <p class="meta"><span>Oct 2024 to Aug 2025</span><span>Gautam Buddha Nagar, India</span><span>Hybrid</span></p>
+        <h3>Real Prosperity Pvt. Ltd.</h3>
+        <p class="role">Digital Marketing Executive</p>
+        <ul>
+          <li>Prepared and presented the monthly Tableau reporting on lead generation spend, campaign return and channel effectiveness, which is what the budget decisions were argued from.</li>
+          <li>Defined the lead qualification criteria with sales and marketing, covering budget, location and property type, so only prospects matching a real requirement moved downstream.</li>
+          <li>Passed pre-qualified leads to the marketing team with a written summary of each client requirement, so follow up was faster and better targeted.</li>
+          <li>Ran and optimised Google Ads campaigns against cost per lead and conversion, tracked through to booked site visits.</li>
+          <li>Owned the end to end social media strategy for a real estate company, driving visibility and inbound leads.</li>
+        </ul>
+      </article>
+      <article class="job rv">
+        <p class="meta"><span>Apr 2024 to Jul 2024</span><span>Noida, India</span></p>
+        <h3>Refenia Tech Pvt. Ltd.</h3>
+        <p class="role">Web Developer Intern</p>
+        <ul>
+          <li>Gathered functional requirements from internal stakeholders and turned them into development tasks, wireframes and acceptance criteria.</li>
+          <li>Built and maintained responsive front end features to sprint deadlines inside a small delivery team.</li>
+          <li>Tested releases against the agreed requirements, logged defects and supported user acceptance testing before deployment.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EDUCATION AND CERTIFICATIONS ================= -->
+<section id="education">
+  <div class="wrap">
+    <div class="rvgroup">
+      <p class="kicker rv">Education and certifications</p>
+      <h2 class="h2 rv">The paperwork behind it.</h2>
+    </div>
+    <div class="edu-grid rvgroup">
+      <div class="rv">
+        <h3>Education</h3>
+        <div class="deg">
+          <p class="t">MSc Business Analytics</p>
+          <p class="s">University of Birmingham / Sep 2025 to Sep 2026</p>
+          <p>Statistical modelling, predictive analytics and business intelligence, assessed through a client facing group capstone.</p>
+        </div>
+        <div class="deg">
+          <p class="t">BTech Computer Science and Engineering</p>
+          <p class="s">Vellore Institute of Technology / Sep 2020 to Sep 2024</p>
+          <p>Four years of how software is designed, built and tested, which is the half of business analysis that most analysts have to learn on the job.</p>
+        </div>
+      </div>
+      <div class="rv">
+        <h3>Certifications</h3>
+        <ul class="certlist">
+          <li><span class="src">DataCamp</span><span>Intermediate SQL</span></li>
+          <li><span class="src">DataCamp</span><span>Data Manipulation in SQL</span></li>
+          <li><span class="src">DataCamp</span><span>Intermediate Python</span></li>
+          <li><span class="src">DataCamp</span><span>Analyzing Data in Tableau</span></li>
+          <li><span class="src">DataCamp</span><span>Introduction to Power BI</span></li>
+          <li><span class="src">DataCamp</span><span>Introduction to Statistics</span></li>
+          <li><span class="src">LinkedIn</span><span>Business Analysis Foundations</span></li>
+          <li><span class="src">LinkedIn</span><span>Business Analysis: Essential Tools and Techniques</span></li>
+          <li><span class="src">LinkedIn</span><span>Strategic Business Analysis Essentials</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="rvgroup">
+      <p class="kicker rv">Contact</p>
+      <h2 class="h2 rv">If that sounded like the person you need, say so.</h2>
+      <p class="lede rv">I read everything. One line is plenty.</p>
+    </div>
+    <div class="cgrid">
+      <form id="cform" novalidate>
+        <div class="field">
+          <label for="f-name">Your name</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Who is getting in touch" required>
+        </div>
+        <div class="field">
+          <label for="f-email">Your email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" placeholder="Where I should reply" required>
+        </div>
+        <div class="field">
+          <label for="f-msg">What the role is</label>
+          <textarea id="f-msg" name="message" placeholder="A line about the role, the team, or the problem" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send message</button>
+        <p class="formnote">This opens your own email app with the message ready to send. If nothing opens, the address is right beside this.</p>
+        <p class="sent" id="sent" role="status">Your email app should have opened with the message ready. If it did not, copy the address instead.</p>
+      </form>
+      <div>
+        <div class="mailblock">
+          <p class="lab">Or email me directly</p>
+          <p class="addr" id="addr">apy270602@gmail.com</p>
+          <button type="button" class="copybtn" id="copybtn">Copy address</button>
+        </div>
+        <div class="secondary">
+          <a href="tel:+447887149513">07887 149513</a>
+          <a href="https://www.linkedin.com/in/aditya-pratap-yadav-6505742a5/" target="_blank" rel="noopener noreferrer">linkedin.com/in/aditya-pratap-yadav-6505742a5</a>
+          <a href="assets/Aditya-Pratap-Yadav-CV.pdf" download>Download CV (PDF)</a>
+        </div>
+        <p class="status">Eligible to work in the UK. No sponsorship needed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap frow">
+    <div>
+      <p class="fname">Aditya Pratap Yadav</p>
+      <p class="fmeta">Graduate Business Analyst / Birmingham, England</p>
+    </div>
+    <div class="flinks">
+      <a href="mailto:apy270602@gmail.com">apy270602@gmail.com</a>
+      <a href="tel:+447887149513">07887 149513</a>
+      <a href="https://www.linkedin.com/in/aditya-pratap-yadav-6505742a5/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="assets/Aditya-Pratap-Yadav-CV.pdf" download>CV</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+"use strict";
+
+/* Two cuts of the same film. Landscape for desktops, a natively vertical cut for phones, so
+   a phone never gets a 16:9 frame cover-cropped down to its middle quarter. A visitor only
+   ever downloads one of them. Byte sizes are the real file sizes, the loading ring's
+   fallback when Content-Length is missing. */
+var LANDSCAPE = {video:'assets/hero-scrub.mp4', bytes:3264859,
+                 poster:'assets/hero-poster.jpg', ending:'assets/hero-ending.jpg'};
+var PORTRAIT  = {video:'assets/hero-scrub-portrait.mp4', bytes:3599371,
+                 poster:'assets/hero-poster-portrait.jpg', ending:'assets/hero-ending-portrait.jpg'};
+var SRC = LANDSCAPE;
+
+/* Only two conditions still get a static image: a phone held sideways has no room for the
+   journey, and reduced motion must not request video at all. */
+var STATIC_GATES = [
+  '(orientation: landscape) and (pointer: coarse) and (max-height: 560px)',
+  '(prefers-reduced-motion: reduce)'
+];
+/* Everything portrait shaped gets the vertical cut. */
+var PORTRAIT_GATES = [
+  '(max-width: 720px)',
+  '(orientation: portrait) and (max-width: 1024px)',
+  '(orientation: portrait) and (pointer: coarse)'
+];
+
+var BANDS = [
+  {a:0.00,b:0.19},{a:0.21,b:0.40},{a:0.42,b:0.60},{a:0.62,b:0.78},{a:0.80,b:1.00}
+];
+
+var video   = document.getElementById('hero');
+var stage   = document.querySelector('.stage');
+var heroSec = document.querySelector('.hero');
+var posterL = document.querySelector('.poster');
+var ring    = document.querySelector('.ring');
+var bandEls = [].slice.call(document.querySelectorAll('.band'));
+var bandScrim = document.querySelector('.band-scrim');
+
+function clamp(v,lo,hi){return Math.min(hi,Math.max(lo,v));}
+function smoothstep(p,e0,e1){var t=clamp((p-e0)/(e1-e0),0,1);return t*t*(3-2*t);}
+function rng(seed){var s=seed>>>0;return function(){s=(s*1664525+1013904223)>>>0;return s/4294967296;};}
+
+/* ---------- split the headlines once, at load ---------- */
+(function splitAll(){
+  var r = rng(20260915);
+  bandEls.forEach(function(band){
+    var el = band.querySelector('[data-split]');
+    if(!el) return;
+    var mode = el.getAttribute('data-split');
+    var text = el.getAttribute('data-text') || '';
+    var em   = el.getAttribute('data-em') || '';
+    var spread = parseFloat(band.getAttribute('data-spread') || '0.45');
+
+    var sr = document.createElement('span');
+    sr.className='sr'; sr.textContent=text;
+
+    if(mode==='blur'){
+      var stackEl=document.createElement('span');
+      stackEl.className='stack'; stackEl.setAttribute('aria-hidden','true');
+      var soft=document.createElement('span'); soft.className='soft'; soft.textContent=text;
+      var sharp=document.createElement('span'); sharp.className='sharp'; sharp.textContent=text;
+      stackEl.appendChild(soft); stackEl.appendChild(sharp);
+      el.textContent=''; el.appendChild(sr); el.appendChild(stackEl);
+      return;
+    }
+
+    var vis=document.createElement('span');
+    vis.setAttribute('aria-hidden','true');
+    var words=text.split(' ');
+    var totalChars=text.replace(/ /g,'').length, ci=0;
+    var emWords=em?em.split(' '):[];
+
+    words.forEach(function(word,wi){
+      var w=document.createElement('span'); w.className='w';
+      if(emWords.indexOf(word)!==-1) w.classList.add('em');
+      if(mode==='word'){
+        w.textContent=word;
+        w.style.setProperty('--th',(wi/Math.max(1,words.length)*spread + r()*0.05).toFixed(3));
+      } else {
+        for(var k=0;k<word.length;k++){
+          var c=document.createElement('span'); c.className='c'; c.textContent=word[k];
+          var th;
+          if(band.classList.contains('e-grid')){
+            th=(ci/Math.max(1,totalChars))*spread + r()*0.06;
+            c.style.setProperty('--jx',((r()*2-1)*46).toFixed(1)+'px');
+            c.style.setProperty('--jy','0px'); c.style.setProperty('--jr','0deg');
+          } else {
+            th=r()*0.55;
+            c.style.setProperty('--jx',((r()*2-1)*54).toFixed(1)+'px');
+            c.style.setProperty('--jy',((r()*2-1)*44).toFixed(1)+'px');
+            c.style.setProperty('--jr',((r()*2-1)*26).toFixed(1)+'deg');
+          }
+          c.style.setProperty('--th',th.toFixed(3));
+          w.appendChild(c); ci++;
+        }
+      }
+      vis.appendChild(w);
+      if(wi<words.length-1) vis.appendChild(document.createTextNode(' '));
+    });
+    el.textContent=''; el.appendChild(sr); el.appendChild(vis);
+  });
+})();
+
+/* ---------- hero progress and gated seeks ---------- */
+function heroProgress(){
+  var range = heroSec.offsetHeight - window.innerHeight;
+  if(range<=0) return 0;
+  return clamp(-heroSec.getBoundingClientRect().top/range,0,1);
+}
+
+var seekBusy=false, pendingTime=null;
+function requestSeek(t){
+  if(!video.duration) return;
+  if(seekBusy){pendingTime=t;return;}
+  seekBusy=true; video.currentTime=t;
+}
+video.addEventListener('seeked',function(){
+  seekBusy=false;
+  if(pendingTime!==null){var t=pendingTime;pendingTime=null;requestSeek(t);}
+});
+video.addEventListener('error',function(){seekBusy=false;pendingTime=null;failVideo();});
+
+/* ---------- caption bands, delta gated ---------- */
+var bandState = BANDS.map(function(){return {op:-1,k:-1};});
+var loadK=0, loadStart=0, loadRamping=false, lastScrimOp=-1;
+
+function updateCaptions(p){
+  var scrimWant=0;
+  for(var i=0;i<BANDS.length;i++){
+    var b=BANDS[i], el=bandEls[i], st=bandState[i];
+    var f=Math.min(0.02,(b.b-b.a)/3);
+    var inRamp  = (i===0) ? 1 : smoothstep(p,b.a,b.a+f);
+    var outRamp = (i===BANDS.length-1) ? 1 : (1-smoothstep(p,b.b-f,b.b));
+    var op = inRamp*outRamp;
+
+    var ramp = parseFloat(el.getAttribute('data-ramp')||'0') || Math.min(0.025,(b.b-b.a)*0.35);
+    var k = clamp((p-b.a)/ramp,0,1);
+    if(i===0) k = Math.max(k, loadK);
+
+    if(Math.abs(op-st.op)>0.004){ st.op=op; el.style.opacity=op.toFixed(3); }
+    if(Math.abs(k-st.k)>0.008){ st.k=k; el.style.setProperty('--k',k.toFixed(3)); }
+
+    var want = op*(0.30+0.70*k);
+    if(want>scrimWant) scrimWant=want;
+  }
+  if(Math.abs(scrimWant-lastScrimOp)>0.005){
+    lastScrimOp=scrimWant; bandScrim.style.opacity=scrimWant.toFixed(3);
+  }
+}
+
+/* ---------- rAF drive that rests ---------- */
+var target=0, shown=0, rafId=null, lastTick=0, heroOnScreen=true;
+function tick(now){
+  var dt=Math.min(100, now-(lastTick||now)); lastTick=now;
+  shown += (target-shown)*(1-Math.pow(1-0.16, dt/16.667));
+  if(loadRamping){
+    loadK = clamp((now-loadStart)/900,0,1);
+    if(loadK>=1) loadRamping=false;
+  }
+  if(Math.abs(target-shown)<0.0005 && !loadRamping){ shown=target; rafId=null; lastTick=0; }
+  else { rafId=requestAnimationFrame(tick); }
+  if(video.duration) requestSeek(shown*video.duration);
+  updateCaptions(shown);
+}
+function kick(){ if(rafId===null && heroOnScreen) rafId=requestAnimationFrame(tick); }
+function onScroll(){ target=heroProgress(); kick(); }
+
+if('IntersectionObserver' in window){
+  new IntersectionObserver(function(es){
+    heroOnScreen=es[0].isIntersecting;
+    if(heroOnScreen) kick();
+    else if(rafId!==null){cancelAnimationFrame(rafId);rafId=null;lastTick=0;}
+  },{rootMargin:'120px'}).observe(heroSec);
+}
+
+/* ---------- streamed blob with ring, watchdog and the file:// branch ---------- */
+var heroLoadedFor=null, heroLoading=false, currentCtrl=null;
+function makeChevron(){
+  var s=document.createElementNS('http://www.w3.org/2000/svg','svg');
+  s.setAttribute('class','chev'); s.setAttribute('viewBox','0 0 24 34'); s.setAttribute('aria-hidden','true');
+  var pa=document.createElementNS('http://www.w3.org/2000/svg','path');
+  pa.setAttribute('d','M4 12l8 8 8-8'); pa.setAttribute('fill','none');
+  pa.setAttribute('stroke','currentColor'); pa.setAttribute('stroke-width','1.8');
+  pa.setAttribute('stroke-linecap','round'); pa.setAttribute('stroke-linejoin','round');
+  s.appendChild(pa); return s;
+}
+function failVideo(){
+  if(ring && ring.parentNode) ring.replaceWith(makeChevron());
+  stage.classList.add('video-failed');
+}
+function armReveal(){
+  video.addEventListener('canplay',function(){
+    if(video.duration) requestSeek(heroProgress()*video.duration);
+    stage.classList.add('video-ready');
+  },{once:true});
+}
+function setRing(v){ if(ring) ring.style.setProperty('--ld',v); }
+function loadHeroBlob(src){
+  var ctrl=new AbortController(); currentCtrl=ctrl;
+  var watchdog=setTimeout(function(){ctrl.abort();},20000);
+  return fetch(src.video,{signal:ctrl.signal}).then(function(res){
+    if(!res.ok || !res.body) throw new Error('no body');
+    var total=Number(res.headers.get('Content-Length'))||src.bytes;
+    var reader=res.body.getReader(), chunks=[], got=0, lastRing=0;
+    function pump(){
+      return reader.read().then(function(r){
+        if(r.done){
+          clearTimeout(watchdog);
+          setRing(0); if(ring) ring.classList.add('done');
+          video.src=URL.createObjectURL(new Blob(chunks,{type:'video/mp4'}));
+          heroLoadedFor=src.video;
+          armReveal(); video.load();
+          return;
+        }
+        clearTimeout(watchdog);
+        watchdog=setTimeout(function(){ctrl.abort();},20000);
+        chunks.push(r.value); got+=r.value.length;
+        var frac=Math.min(1,got/total), now=performance.now();
+        if(now-lastRing>100||frac===1){lastRing=now;setRing(Math.round(126*(1-frac)));}
+        return pump();
+      });
+    }
+    return pump();
+  });
+}
+function initHero(){
+  posterL.style.backgroundImage="url('"+SRC.poster+"')";
+  if(heroLoadedFor===SRC.video || heroLoading) return;
+
+  /* orientation changed after a load (a tablet rotating): drop the old blob and
+     fetch the cut that actually fits the screen now */
+  if(heroLoadedFor && heroLoadedFor!==SRC.video){
+    if(currentCtrl){ try{currentCtrl.abort();}catch(e){} }
+    if(video.src && video.src.indexOf('blob:')===0) URL.revokeObjectURL(video.src);
+    video.removeAttribute('src'); video.load();
+    stage.classList.remove('video-ready','video-failed');
+    heroLoadedFor=null;
+  }
+
+  heroLoading=true;
+  loadStart=performance.now(); loadRamping=true; kick();
+  if(location.protocol==='file:'){
+    /* fetch is blocked on file://, but the video element still loads a local file */
+    video.src=SRC.video; heroLoadedFor=SRC.video; armReveal(); video.load();
+    if(ring) ring.classList.add('done');
+    heroLoading=false;
+    return;
+  }
+  var wanted=SRC, started=false;
+  function start(){
+    if(started) return; started=true;
+    loadHeroBlob(wanted).catch(failVideo).then(function(){ heroLoading=false; });
+  }
+  var img=new Image();
+  img.onload=start; img.onerror=start; img.src=SRC.poster;
+  setTimeout(start,4000);
+}
+
+/* ---------- the gates, kept live ---------- */
+var STATIC_MQ=STATIC_GATES.map(function(q){return window.matchMedia(q);});
+var PORTRAIT_MQ=PORTRAIT_GATES.map(function(q){return window.matchMedia(q);});
+var scrubOn=false;
+
+function enableScrub(){
+  document.body.classList.remove('static-hero-on');
+  document.body.classList.toggle('portrait-hero', SRC===PORTRAIT);
+  initHero();
+  if(!scrubOn){
+    scrubOn=true;
+    window.addEventListener('scroll',onScroll,{passive:true});
+  }
+  bandState.forEach(function(s){s.op=-1;s.k=-1;});
+  lastScrimOp=-1;
+  unpinFinalStates();
+  updateCaptions(heroProgress());
+  onScroll();
+}
+function disableScrub(){
+  document.body.classList.add('static-hero-on');
+  document.body.classList.remove('portrait-hero');
+  posterL.style.backgroundImage="url('"+SRC.ending+"')";
+  if(scrubOn){ scrubOn=false; window.removeEventListener('scroll',onScroll); }
+  if(rafId!==null){cancelAnimationFrame(rafId);rafId=null;lastTick=0;}
+}
+function applyHeroMode(){
+  SRC = PORTRAIT_MQ.some(function(m){return m.matches;}) ? PORTRAIT : LANDSCAPE;
+  if(STATIC_MQ.some(function(m){return m.matches;})) disableScrub();
+  else enableScrub();
+}
+STATIC_MQ.concat(PORTRAIT_MQ).forEach(function(m){
+  if(m.addEventListener) m.addEventListener('change',applyHeroMode);
+  else if(m.addListener) m.addListener(applyHeroMode);
+});
+
+/* ---------- the resolve line ---------- */
+var SEGS=26, railG=document.getElementById('rail'), segEls=[], railPinned=false;
+(function buildRail(){
+  var r=rng(77), gap=1000/SEGS;
+  for(var i=0;i<SEGS;i++){
+    var ln=document.createElementNS('http://www.w3.org/2000/svg','line');
+    var y=i*gap+3;
+    ln.setAttribute('y1',y); ln.setAttribute('y2',y+gap-9);
+    ln.setAttribute('x1',22); ln.setAttribute('x2',22);
+    ln.dataset.jx=((r()*2-1)*15).toFixed(2);
+    railG.appendChild(ln); segEls.push(ln);
+  }
+})();
+var lastRailK=-1;
+function drawRail(){
+  if(railPinned) return;
+  var h=document.documentElement.scrollHeight-window.innerHeight;
+  var p=h>0?clamp(window.scrollY/h,0,1):0;
+  if(Math.abs(p-lastRailK)<0.004) return;
+  lastRailK=p;
+  for(var i=0;i<segEls.length;i++){
+    var ln=segEls[i];
+    var k=clamp((p*1.18-(i/SEGS))*3.6,0,1);
+    var jx=parseFloat(ln.dataset.jx)*(1-k);
+    ln.setAttribute('x1',(22+jx).toFixed(2));
+    ln.setAttribute('x2',(22+jx).toFixed(2));
+    ln.style.opacity=(0.20+0.80*k).toFixed(3);
+  }
+}
+function pinRail(){railPinned=true;segEls.forEach(function(ln){ln.setAttribute('x1',22);ln.setAttribute('x2',22);ln.style.opacity='1';});}
+function unpinRail(){railPinned=false;lastRailK=-1;drawRail();}
+window.addEventListener('scroll',drawRail,{passive:true});
+drawRail();
+
+/* ---------- section entrances ---------- */
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting) return;
+      e.target.classList.add('in');
+      setTimeout(function(){e.target.classList.add('done');},1400);
+      io.unobserve(e.target);
+    });
+  },{threshold:0.12,rootMargin:'0px 0px -6% 0px'});
+  [].slice.call(document.querySelectorAll('.rvgroup')).forEach(function(g){io.observe(g);});
+  [].slice.call(document.querySelectorAll('.rv')).forEach(function(el){
+    if(!el.closest('.rvgroup')) io.observe(el);
+  });
+}
+
+/* ---------- the one interactive moment: 94 to 1 ---------- */
+var VARIANTS=[
+  'Intro to Ref Managing','introduction to reference management','Ref Management (Intro)',
+  'Introduction to Reference Mgmt','INTRO REFERENCE MANAGEMENT','Introduction to Reference Management ',
+  'intro to ref. management','Reference Management, Introduction','Introduction To Reference Managment',
+  'Intro Ref Mgmt','introduction  to reference management','Ref Mgmt Intro Session',
+  'Introduction to Referencing Management','INTRODUCTION TO REF MANAGEMENT','Intro. to Reference Management',
+  'reference management (introduction)','Introduction to Reference Management (Online)',
+  'Intro to Reference Management','Ref management introduction','Introduction to Reference Managment'
+];
+var stackEl=document.getElementById('stack');
+var holdBtn=document.getElementById('holdbtn');
+var cval=document.getElementById('cval');
+var resolveOut=document.getElementById('resolveout');
+var vEls=[], canonEl=null;
+
+(function buildStack(){
+  var r=rng(404);
+  VARIANTS.forEach(function(t,i){
+    var s=document.createElement('p'); s.className='variant'; s.textContent=t;
+    var oy=(i-(VARIANTS.length-1)/2)*8.5;
+    var ox=(r()*2-1)*130;
+    s.dataset.oy=oy.toFixed(1); s.dataset.ox=ox.toFixed(1);
+    s.dataset.th=(i/VARIANTS.length*0.72).toFixed(3);
+    s.style.transform='translate(calc(-50% + '+ox.toFixed(1)+'px),'+oy.toFixed(1)+'px)';
+    stackEl.appendChild(s); vEls.push(s);
+  });
+  canonEl=document.createElement('p');
+  canonEl.className='canonical'; canonEl.textContent='Introduction to Reference Management';
+  stackEl.appendChild(canonEl);
+})();
+
+var hp=0, hpTarget=0, hpRaf=null, holdDone=false, lastCount=-1, lastCountAt=0;
+function paintHold(now){
+  for(var i=0;i<vEls.length;i++){
+    var s=vEls[i], th=parseFloat(s.dataset.th);
+    var k=clamp((hp-th)/(1-th||1)*1.35,0,1);
+    var ox=parseFloat(s.dataset.ox)*(1-k), oy=parseFloat(s.dataset.oy)*(1-k);
+    s.style.transform='translate(calc(-50% + '+ox.toFixed(1)+'px),'+oy.toFixed(1)+'px)';
+    s.style.opacity=(1-k).toFixed(3);
+  }
+  var ck=clamp((hp-0.45)/0.4,0,1);
+  canonEl.style.opacity=ck.toFixed(3);
+  canonEl.style.transform='translateX(-50%) scale('+(0.96+0.04*ck).toFixed(3)+')';
+  holdBtn.style.setProperty('--hp',hp.toFixed(3));
+  var n=Math.max(1,Math.round(94-93*hp));
+  var t=now||performance.now();
+  if(n!==lastCount && t-lastCountAt>100){ lastCount=n; lastCountAt=t; cval.textContent=n; }
+  if(hp>=0.999 && !holdDone){ holdDone=true; cval.textContent='1'; resolveOut.classList.add('lit'); }
+}
+function holdTick(now){
+  var d=hpTarget-hp;
+  hp += d*(hpTarget>hp?0.045:0.075);
+  if(Math.abs(hpTarget-hp)<0.002){ hp=hpTarget; hpRaf=null; paintHold(now); return; }
+  hpRaf=requestAnimationFrame(holdTick);
+  paintHold(now);
+}
+function holdKick(){ if(hpRaf===null) hpRaf=requestAnimationFrame(holdTick); }
+function holdStart(e){ if(e&&e.cancelable)e.preventDefault(); hpTarget=1; holdKick(); }
+function holdEnd(){ if(!holdDone) hpTarget=0; holdKick(); }
+function completeHold(){ hp=1; hpTarget=1; holdDone=true; paintHold(performance.now()); cval.textContent='1'; resolveOut.classList.add('lit'); }
+
+holdBtn.addEventListener('pointerdown',holdStart);
+holdBtn.addEventListener('mousedown',holdStart);
+holdBtn.addEventListener('touchstart',holdStart,{passive:false});
+window.addEventListener('pointerup',holdEnd);
+window.addEventListener('mouseup',holdEnd);
+window.addEventListener('touchend',holdEnd);
+window.addEventListener('pointercancel',holdEnd);
+window.addEventListener('touchcancel',holdEnd);
+window.addEventListener('blur',holdEnd);
+holdBtn.addEventListener('keydown',function(e){if(e.key===' '||e.key==='Enter'){e.preventDefault();holdStart();}});
+holdBtn.addEventListener('keyup',function(e){if(e.key===' '||e.key==='Enter'){e.preventDefault();holdEnd();}});
+
+/* ---------- contact form (mailto) ---------- */
+var form=document.getElementById('cform');
+form.addEventListener('submit',function(e){
+  e.preventDefault();
+  var n=document.getElementById('f-name').value.trim();
+  var em=document.getElementById('f-email').value.trim();
+  var m=document.getElementById('f-msg').value.trim();
+  if(!n||!em||!m){
+    [['f-name',n],['f-email',em],['f-msg',m]].forEach(function(pr){
+      document.getElementById(pr[0]).style.borderColor = pr[1] ? '' : 'var(--accent)';
+    });
+    return;
+  }
+  var subject='Role enquiry from '+n;
+  var body=m+'\n\n'+n+'\n'+em;
+  window.location.href='mailto:apy270602@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+  document.getElementById('sent').classList.add('on');
+});
+
+var copyBtn=document.getElementById('copybtn');
+copyBtn.addEventListener('click',function(){
+  var txt='apy270602@gmail.com';
+  function done(){copyBtn.textContent='Copied.';setTimeout(function(){copyBtn.textContent='Copy address';},2200);}
+  function fallback(){
+    var ta=document.createElement('textarea'); ta.value=txt;
+    ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select();
+    try{document.execCommand('copy');done();}catch(err){copyBtn.textContent='Select and copy';}
+    document.body.removeChild(ta);
+  }
+  if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(done,fallback);
+  else fallback();
+});
+
+/* ---------- reduced motion, live and both ways ---------- */
+function pinToFinalStates(){
+  pinRail(); completeHold();
+  [].slice.call(document.querySelectorAll('.rvgroup,.rv')).forEach(function(g){g.classList.add('in','done');});
+  bandEls.forEach(function(el,i){ el.style.opacity=(i===BANDS.length-1)?'1':'0'; el.style.setProperty('--k','1'); });
+  lastScrimOp=1; bandScrim.style.opacity='1';
+  if(rafId!==null){cancelAnimationFrame(rafId);rafId=null;lastTick=0;}
+}
+function unpinFinalStates(){
+  unpinRail();
+  holdDone=false; hp=0; hpTarget=0; lastCount=-1;
+  paintHold(performance.now());
+  resolveOut.classList.remove('lit');
+}
+var rmq=window.matchMedia('(prefers-reduced-motion: reduce)');
+function onRM(e){ if(e.matches) pinToFinalStates(); else applyHeroMode(); }
+if(rmq.addEventListener) rmq.addEventListener('change',onRM);
+else if(rmq.addListener) rmq.addListener(onRM);
+
+document.addEventListener('visibilitychange',function(){
+  document.body.classList.toggle('paused',document.hidden);
+});
+
+applyHeroMode();
+if(rmq.matches) pinToFinalStates();
+window.addEventListener('resize',function(){
+  bandState.forEach(function(s){s.op=-1;s.k=-1;});
+  lastScrimOp=-1; lastRailK=-1; onScroll(); drawRail();
+},{passive:true});
+
+})();
+</script>
+</body>
+</html>
