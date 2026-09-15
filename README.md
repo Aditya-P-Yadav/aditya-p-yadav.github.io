@@ -1,8 +1,8 @@
-# adityapratapyadav.netlify.app
+# aditya-portfolio.co.uk
 
 Portfolio site for **Aditya Pratap Yadav**, Graduate Business Analyst, Birmingham.
 
-Live at **https://adityapratapyadav.netlify.app** and mirrored at
+Live at **https://aditya-portfolio.co.uk** and also at
 **https://aditya-p-yadav.github.io**.
 
 ## What it is
